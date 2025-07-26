@@ -1,7 +1,12 @@
 function checkAnswer() {
     var correctAnswer = "4";
-    var userAnswer = document.querySelector("quiz")
+    var userAnswer = document.querySelector(name="quiz")
 
+    if (userAnswer) {
+        userAnswer = userAnswer.value;
+        const feedback = document.getElementById("feedback");
+        feedback.textContent = "checked";
+    }
     if (userAnswer.value === correctAnswer) {
         const feedback = document.getElementById("feedback");
         feedback.textContent = "Correct! Well done.";
